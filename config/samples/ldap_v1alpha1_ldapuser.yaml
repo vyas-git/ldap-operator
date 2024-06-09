@@ -1,0 +1,12 @@
+apiVersion: ldap.gopkg.blog/v1alpha1
+kind: LdapUser
+metadata:
+  labels:
+    app.kubernetes.io/name: ldapuser
+    app.kubernetes.io/instance: ldapuser-sample
+    app.kubernetes.io/part-of: ldap-operator
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/created-by: ldap-operator
+  name: ldapuser-sample
+spec:
+  # TODO(user): Add fields here

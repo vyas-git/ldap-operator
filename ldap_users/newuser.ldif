@@ -1,0 +1,7 @@
+dn: uid=johndoe,dc=example,dc=org
+objectClass: inetOrgPerson
+uid: johndoe
+sn: Doe
+cn: John Doe
+displayName: John Doe
+userPassword: secret

@@ -1,0 +1,27 @@
+# permissions for end users to view ldapusers.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: clusterrole
+    app.kubernetes.io/instance: ldapuser-viewer-role
+    app.kubernetes.io/component: rbac
+    app.kubernetes.io/created-by: ldap-operator
+    app.kubernetes.io/part-of: ldap-operator
+    app.kubernetes.io/managed-by: kustomize
+  name: ldapuser-viewer-role
+rules:
+- apiGroups:
+  - ldap.gopkg.blog
+  resources:
+  - ldapusers
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - ldap.gopkg.blog
+  resources:
+  - ldapusers/status
+  verbs:
+  - get
